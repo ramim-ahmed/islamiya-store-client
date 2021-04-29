@@ -3,7 +3,7 @@
 <h3>Overview</h3>
 <p>This is a creative animal Servieces website.</p>
 
-<span>Project Preview : https://pet-care-house-3c798.web.app/ </span>
+<span>Project Preview : https://islamiya-store.web.app/ </span>
 
 <div></div> <br>
 
@@ -31,7 +31,7 @@
 
 <h3>Screenshot</h3>
   
-  <img height="300px" src="./src/islamiya-screenshot/islamiya-1.png" alt="ss" /> 
+  <img height="300px" src="./src/islamiya-screenshot/isalmiya-4.png" alt="ss" /> 
   
   <div></div> <br>
   
