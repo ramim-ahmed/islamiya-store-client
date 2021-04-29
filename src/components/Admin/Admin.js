@@ -1,10 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Button, Card, Col, Form, Row } from 'react-bootstrap';
+import { Button, Card, Col, Form, Row, Table } from 'react-bootstrap';
 import ManageProduct from '../ManageProduct/ManageProduct';
 
 const Admin = () => {
-    const [manageProduct, setManageProduct] = useState(false);
+    const [manageProduct, setManageProduct] = useState(true);
     const [addProduct, setAddProduct]  = useState(false);
     const [photo, setPhoto] = useState('');
     const [manageProductList, setManageProductList] = useState([]);
@@ -86,10 +86,25 @@ const Admin = () => {
                   </div>
               </Col>
               {
-                  manageProduct && <Col md = {9} className = 'mt-5' > 
-                   {
-                       manageProductList.map(product => <ManageProduct product = {product} />)
-                   }
+                  manageProduct && <Col md = {9} className = 'mt-5' >
+
+                      <Table striped bordered hover>
+                      <thead>
+                            <tr>
+                            <th>Product Name</th>
+                            <th>weight</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                            </tr>
+                        </thead> 
+                        <tbody>
+                            {
+                            manageProductList.map(product => <ManageProduct product = {product}/> )
+                            }
+                        </tbody>
+                      </Table>
+
+                   
                   </Col>
               }
               {

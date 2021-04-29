@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table } from 'react-bootstrap';
+import { Button, ButtonGroup } from 'react-bootstrap';
 
 const ManageProduct = (props) => {
     const {name, weight, price, _id} = props.product;
@@ -17,26 +17,21 @@ const ManageProduct = (props) => {
     
     return (
         <>
-                     <Table id = 'container' striped bordered hover variant="dark">
-                        <thead>
-                            <tr>
-                            <th>Product Name</th>
-                            <th>weight</th>
-                            <th>Price</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr className = 'product-row' >
+                            <tr id='container' className = 'product-row' >
                                 <td> {name} </td>
                                 <td> {weight} </td>
                                 <td> ${price} </td>
-                                <td> <button> edit</button> </td>
-                                <td> <button type = 'button' onClick = { () => handleDeleteProduct(_id)} > X </button> </td>
+                                <td> 
+                                    <ButtonGroup>
+                                    <Button className='action-btn ' size = 'sm' type = 'button' onClick = { () => handleDeleteProduct(_id)} > 
+                                        Delete
+                                     </Button>
+                                     <Button  className='action-btn' type = 'button' size = 'sm'>
+                                        Edit
+                                    </Button> 
+                                    </ButtonGroup>
+                                </td>
                             </tr> 
-                        </tbody>
-                    </Table>
         </>
     );
 };
