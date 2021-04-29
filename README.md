@@ -1,7 +1,7 @@
 # Pet-Care-House
 
 <h3>Overview</h3>
-<p>This is a creative animal Servieces website.</p>
+<p>This is a modern grocery product sale e-commerce website.</p>
 
 <span>Project Preview : https://islamiya-store.web.app/ </span>
 
